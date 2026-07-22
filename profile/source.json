@@ -1,0 +1,118 @@
+{
+  "personal": {
+    "name": "Gautam Anand",
+    "title": "Software Engineer",
+    "location": "Phagwara, Punjab, India",
+    "phone": "+91 7717484812",
+    "email": "gautam.anand.ptu@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/gautam-anand-ptu",
+    "github": "https://github.com/Agent-Gautam"
+  },
+  "summary": "Computer Science graduate (B.Tech, 2026) and software engineer with two internships spanning frontend and full-stack development across the complete software development life cycle — coding, debugging, testing, and deployment. Strong foundation in data structures, algorithms, and problem solving. Effective in Agile teams, shipping production features that meet quality and performance standards.",
+  "technicalSkills": {
+    "languages": [
+      "C",
+      "C++",
+      "Python",
+      "JavaScript (ES6)",
+      "TypeScript"
+    ],
+    "algorithmsAndCS": [
+      "Data Structures & Algorithms",
+      "Problem Solving",
+      "OOP",
+      "SDLC fundamentals"
+    ],
+    "frameworksAndLibraries": [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Redux"
+    ],
+    "webAndStyling": [
+      "HTML5",
+      "CSS",
+      "Sass",
+      "Tailwind CSS",
+      "ShadCN"
+    ],
+    "databases": [
+      "SQL",
+      "PostgreSQL"
+    ],
+    "toolsAndPractices": [
+      "Git",
+      "GitHub",
+      "Agile/Scrum",
+      "Code Review",
+      "REST APIs"
+    ]
+  },
+  "workExperience": [
+    {
+      "title": "Software Engineer Intern (Frontend)",
+      "company": "KoinX",
+      "duration": "Jun 2025 – Jun 2026",
+      "description": "Designed and shipped reusable, responsive UI components and features using modern frontend frameworks and TypeScript. Delivered over 70 pull requests across multiple production repositories, working on various features that were reviewed and merged under team code-review standards. Collaborated with senior engineers in an Agile workflow, following component-driven architecture and engineering best practices to consistently meet quality and performance targets."
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Pixels and Grids",
+      "duration": "Dec 2024 – Feb 2025",
+      "description": "Built and enhanced full-stack features for client applications using modern frameworks and databases, participating across all phases from design to deployment. Designed and integrated secure REST APIs and relational database schemas, improving data consistency and feature reliability. Collaborated with designers and developers to deliver production-ready features on deadline."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Cryptax",
+      "techStack": [
+        "Next.js 14",
+        "TypeScript",
+        "Express.js",
+        "PostgreSQL",
+        "Gemini API"
+      ]
+    },
+    {
+      "title": "Faculty Feedback System",
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "title": "Blood Link",
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Tailwind CSS"
+      ]
+    }
+  ],
+  "achievements": [
+    "Runner-up, Code Hunt Competition, GNA University — competed against teams from 20 colleges.",
+    "Runner-up, Byte Battle (Data Structures & Algorithms) competition, IKGPTU.",
+    "4-star rating in C on HackerRank; 200+ problems solved across LeetCode and GeeksforGeeks."
+  ],
+  "education": [
+    {
+      "degree": "B.Tech, Computer Science",
+      "institution": "I.K. Gujral Punjab Technical University",
+      "cgpa": "8.6 / 10",
+      "year": "2022 – 2026"
+    },
+    {
+      "degree": "Full Stack Web Development Training",
+      "institution": "NIELIT",
+      "grade": "Grade S (>80%)",
+      "year": "2024"
+    }
+  ],
+  "certifications": [
+    "Google Cloud Foundations · Google Cloud",
+    "JavaScript Algorithms & Data Structures · freeCodeCamp",
+    "Node.js, Express.js, SQL · Scrimba"
+  ]
+}

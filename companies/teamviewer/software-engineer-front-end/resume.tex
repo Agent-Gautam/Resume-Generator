@@ -1,0 +1,183 @@
+%-------------------------
+% Resume in Latex — Gautam Anand, TeamViewer / Software Engineer - Front End
+% Template: templates/jake.tex (Jake Gutierrez, MIT), cross-engine patched
+% Compile: npm run pdf -- "companies/teamviewer/software-engineer-front-end/resume.tex"
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+% glyphtounicode is pdfTeX-only; XeTeX/LuaTeX (Tectonic) are Unicode-native
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{1pt}
+    \small Phagwara, Punjab, India $|$ +91 7717484812 $|$
+    \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
+    \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
+    \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
+\end{center}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript (ES6+), HTML5, CSS3, SQL, C++, Python} \\
+     \textbf{Frontend}{: React (Hooks, Context API, functional components), Next.js, Redux, MUI, Tailwind CSS, shadcn/ui (Radix UI), Sass, responsive design} \\
+     \textbf{Tools \& Practices}{: Git, GitHub, ESLint, Prettier, Jest, Vitest, REST API integration, Agile, code review} \\
+     \textbf{Backend \& Databases}{: Node.js, Express, PostgreSQL, Prisma, Supabase}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer Intern (Frontend)}{Jun 2025 -- Jun 2026}
+      {KoinX}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built reusable, responsive UI components in React and TypeScript, following the team's component-driven architecture.}
+        \resumeItem{Delivered 70+ pull requests across multiple production repositories, each reviewed and merged under the team's code-review standards.}
+        \resumeItem{Worked with senior engineers in an Agile workflow to meet quality and performance targets on user-facing features.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Developer}{Dec 2024 -- Feb 2025}
+      {Pixels and Grids}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built and enhanced full-stack features for client applications, collaborating with designers and developers from design handoff through deployment.}
+        \resumeItem{Designed and integrated secure REST APIs and relational database schemas, improving data consistency and feature reliability.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{CryptoTax Buddy} $|$ \emph{TypeScript, React 19, Next.js, TanStack Query, Express, PostgreSQL}}{\emph{Solo project}}
+          \resumeItemListStart
+            \resumeItem{Built the Next.js App Router dashboard (React 19, TanStack React Query, shadcn/ui, Tailwind CSS) for an Indian crypto-tax platform, including a streaming AI chat UI with tool-call badges.}
+            \resumeItem{Implemented a resilient client auth layer: Axios interceptors that attach bearer tokens and dedupe concurrent 401s into a single shared token refresh before retrying.}
+            \resumeItem{Also built the Express + Prisma backend, whose deterministic FIFO tax engine is covered by 38 Vitest unit tests.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Blood Link} $|$ \emph{React 19, Next.js 15, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS}}{\emph{Solo project}}
+          \resumeItemListStart
+            \resumeItem{Developed a responsive, dark-mode UI on accessible Radix UI primitives (shadcn/ui), with interactive MapLibre and Leaflet maps, geolocation, and skeleton loading states.}
+            \resumeItem{Implemented geolocation-driven donation-camp search with debounced filtering, distance ranking, and paginated loading over PostGIS-backed queries.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {I.K. Gujral Punjab Technical University}{2022 -- 2026}
+      {B.Tech, Computer Science (CGPA: 8.6/10)}{Punjab, India}
+    \resumeSubheading
+      {NIELIT}{2024}
+      {Full Stack Web Development Training (Grade S, 80\%+)}{}
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Runner-up, Code Hunt Competition, GNA University (teams from 20 colleges); Runner-up, Byte Battle programming contest, IKGPTU.
+    }}
+ \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Google Cloud Foundations (Google Cloud); JavaScript Algorithms \& Data Structures (freeCodeCamp); Node.js, Express.js \& SQL (Scrimba).
+    }}
+ \end{itemize}
+
+\end{document}

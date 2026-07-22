@@ -1,0 +1,10 @@
+{
+  "name": "resume-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "JD-targeted resume generation workspace driven by Claude Code. LaTeX in, PDF out.",
+  "scripts": {
+    "pdf": "node scripts/compile-latex.mjs"
+  }
+}

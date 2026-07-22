@@ -1,0 +1,95 @@
+%==============================================================
+% DEFAULT RESUME TEMPLATE — ATS-friendly, single column, 1 page
+%
+% Compile from project root:
+%   npm run pdf -- "companies/<company>/<role>/resume.tex"
+%
+% Rules for filling this template (see .claude/skills/latex-resume):
+%   - Escape these characters in content:  & % $ # _  ->  \& \% \$ \# \_
+%   - Keep content ASCII. No Unicode symbols, no emoji.
+%   - Never delete the macro definitions; only edit the CONTENT section.
+%   - Target exactly ONE page. Fitting levers, in order:
+%     cut weakest bullets -> shorten bullets -> reduce \vspace -> margins
+%     (never below 0.5in) -> font size (never below 10pt).
+%==============================================================
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+
+% --- Section headers: small caps with a rule underneath -------
+\titleformat{\section}{\large\scshape}{}{0pt}{}[\vspace{-6pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{10pt}{7pt}
+
+% --- Macros ---------------------------------------------------
+% \ResumeHeader{Name}{contact line}
+\newcommand{\ResumeHeader}[2]{%
+  \begin{center}
+    {\Huge\bfseries #1}\\[5pt]
+    {\small #2}%
+  \end{center}\vspace{-6pt}}
+
+% \Entry{Title/Org (bold)}{Right: dates}{Subtitle (italic)}{Right: location/link}
+\newcommand{\Entry}[4]{%
+  \textbf{#1} \hfill {\small #2}\par
+  \textit{\small #3} \hfill {\small\textit{#4}}\par\vspace{-1pt}}
+
+% \EntryLine{Title (bold)}{Right side} — single-line variant (projects, certs)
+\newcommand{\EntryLine}[2]{\textbf{#1} \hfill {\small #2}\par\vspace{-1pt}}
+
+% Bullet list for entries
+\newenvironment{Bullets}
+  {\begin{itemize}[leftmargin=1.15em,itemsep=1.5pt,parsep=0pt,topsep=3pt]\small}
+  {\end{itemize}\vspace{3pt}}
+
+% \SkillRow{Category}{comma-separated skills}
+\newcommand{\SkillRow}[2]{{\small \textbf{#1:} #2}\par\vspace{1.5pt}}
+
+%==============================================================
+% CONTENT — everything below is placeholder; replace per JD
+%==============================================================
+\begin{document}
+
+\ResumeHeader{Your Name}
+  {City, Country \;|\; +91 00000 00000 \;|\;
+   \href{mailto:you@example.com}{you@example.com} \;|\;
+   \href{https://github.com/username}{github.com/username} \;|\;
+   \href{https://linkedin.com/in/username}{linkedin.com/in/username}}
+
+%--------------------------------------------------------------
+\section{Skills}
+\SkillRow{Languages}{TypeScript, JavaScript, SQL}
+\SkillRow{Backend}{Node.js, Express, PostgreSQL, Prisma, REST APIs}
+\SkillRow{Frontend}{React, Next.js, Tailwind CSS}
+\SkillRow{Tools}{Git, Docker, Vitest, CI/CD}
+
+%--------------------------------------------------------------
+\section{Experience}
+\Entry{Job Title}{Jan 2024 -- Present}{Company Name}{City / Remote}
+\begin{Bullets}
+  \item Placeholder bullet describing verified work with concrete technology and an honest, specific outcome.
+  \item Second placeholder bullet; keep bullets varied in structure and length.
+\end{Bullets}
+
+%--------------------------------------------------------------
+\section{Projects}
+\EntryLine{Project Name -- one-line description}{\href{https://github.com/username/repo}{github.com/username/repo}}
+\begin{Bullets}
+  \item Placeholder bullet with the most JD-relevant fact about this project.
+  \item Placeholder bullet with a second verified, specific claim.
+\end{Bullets}
+
+%--------------------------------------------------------------
+\section{Education}
+\Entry{Degree Name}{2021 -- 2025}{Institution Name}{City}
+
+\end{document}

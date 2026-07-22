@@ -1,0 +1,18 @@
+# LaTeX intermediates
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+
+# Node
+node_modules/
+
+# Bundled binaries (re-download via setup notes in CLAUDE.md)
+tools/
+
+# OS
+Thumbs.db
+Desktop.ini
