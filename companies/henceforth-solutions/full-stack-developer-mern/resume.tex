@@ -1,7 +1,10 @@
 %-------------------------
-% Resume in Latex — Gautam Anand, TeamViewer / Software Engineer - Front End
+% Resume in LaTeX — Gautam Anand
+% Role: Full Stack Developer (MERN Stack) @ Henceforth Solutions, Mohali (onsite)
+% Tailored: full-stack. Experience bullets verbatim from library (full-stack subset).
+% Honesty: MongoDB surfaced only via the real JS/MongoDB prototype migration (Faculty Feedback).
 % Template: templates/jake.tex (Jake Gutierrez, MIT), cross-engine patched
-% Compile: npm run pdf -- "companies/teamviewer/software-engineer-front-end/resume.tex"
+% Compile: npm run pdf -- "companies/henceforth-solutions/full-stack-developer-mern/resume.tex"
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -33,8 +36,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -91,8 +94,9 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{1pt}
-    \small Noida, India $|$ +91 7717484812 $|$
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
+    \small Full Stack Developer \\ \vspace{2pt}
+    \small Mohali, Punjab, India $|$ +91 7717484812 $|$
     \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
     \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
     \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
@@ -102,10 +106,11 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: TypeScript, JavaScript (ES6+), HTML5, CSS3, SQL, C++, Python} \\
-     \textbf{Frontend}{: React (Hooks, Context API, functional components), Next.js, Redux, MUI, Tailwind CSS, shadcn/ui (Radix UI), Sass, responsive design} \\
-     \textbf{Tools \& Practices}{: Git, GitHub, ESLint, Prettier, Jest, Vitest, REST API integration, Agile, code review} \\
-     \textbf{Backend \& Databases}{: Node.js, Express, PostgreSQL, Prisma, Supabase}
+     \textbf{Frontend}{: React.js, Next.js, Redux, Redux Toolkit, Context API, JavaScript (ES6+), TypeScript, Tailwind CSS, shadcn/ui, responsive design, SSR/SSG/CSR rendering} \\
+     \textbf{Backend \& APIs}{: Node.js, Express, RESTful APIs, JSON Web Token (JWT), role-based access control, PostgreSQL, MongoDB, Prisma, Supabase} \\
+     \textbf{Testing \& Tools}{: Git, GitHub, npm, Vitest, Jest, ESLint, Prettier, Agile/Scrum, code review} \\
+     \textbf{Languages}{: JavaScript, TypeScript, C++, C, Python, SQL} \\
+     \textbf{CS Foundations}{: Data Structures \& Algorithms, Problem Solving, OOP, SDLC}
     }}
  \end{itemize}
 
@@ -118,7 +123,7 @@
       {KoinX}{Remote}
       \resumeItemListStart
         \resumeItem{Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.}
-        \resumeItem{Designed reusable components (OTP input, chart suite, filter display) for the org's shared design system, consumed across multiple product surfaces — requiring backward-compatible APIs as the components scaled beyond their original use case.}
+        \resumeItem{Owned the transaction-categorization and internal-transfer surface of KoinX's accounting platform across ~12 shipped changes — categorization flows, uncategorize/re-recognize actions, workspace-level transfer settings (React, TypeScript, Redux Toolkit).}
         \resumeItem{Drove frontend performance work in the final phase — bundle-size reduction, component memoization, and a dependency audit removing unused packages.}
       \resumeItemListEnd
 
@@ -126,7 +131,8 @@
       {Full Stack Developer}{Dec 2024 -- Feb 2025}
       {Pixels and Grids}{Remote}
       \resumeItemListStart
-        \resumeItem{Delivered UI/UX features across 4 client projects, including conditional discount logic in an admin pricing panel, responsive navigation/search fixes, and reusable CMS-driven public pages.}
+        \resumeItem{Built full-stack seller and buyer modules for a multi-vendor e-commerce platform (KollaBee), including product CRUD with multi-image uploads (cover, thumbnail, detail) to Supabase, dynamic order/analytics dashboards, and an integrated Razorpay checkout flow.}
+        \resumeItem{Implemented the database and authentication layer for a SaaS platform (Conceevo) using Prisma ORM, and shipped a bulk HTML email marketing feature that targeted users opted into platform updates.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -136,18 +142,22 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{CryptoTax Buddy} $|$ \emph{TypeScript, React 19, Next.js, TanStack Query, Express, PostgreSQL}}{\emph{Solo project}}
+          {\textbf{CryptoTax Buddy} $|$ \emph{React, Next.js, Node.js, Express, TypeScript, PostgreSQL, Prisma}}{\emph{Solo project}}
           \resumeItemListStart
-            \resumeItem{Built the Next.js App Router dashboard (React 19, TanStack React Query, shadcn/ui, Tailwind CSS) for an Indian crypto-tax platform, including a streaming AI chat UI with tool-call badges.}
-            \resumeItem{Implemented a resilient client auth layer: Axios interceptors that attach bearer tokens and dedupe concurrent 401s into a single shared token refresh before retrying.}
-            \resumeItem{Also built the Express + Prisma backend, whose deterministic FIFO tax engine is covered by 38 Vitest unit tests.}
+            \resumeItem{Built a REST API backend on Node.js and Express (TypeScript, Prisma/PostgreSQL) with full JWT authentication — OTP registration, access/refresh-token rotation, and per-device session revocation.}
+            \resumeItem{Built the Next.js App Router frontend (React, TanStack Query, shadcn/Tailwind) with a streaming AI assistant whose figures come from real database-backed tool calls rather than model-generated text.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Blood Link} $|$ \emph{React 19, Next.js 15, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS}}{\emph{Solo project}}
+          {\textbf{Faculty Feedback} $|$ \emph{React, Next.js, TypeScript, MongoDB $\rightarrow$ PostgreSQL, Prisma}}{\emph{Solo project}}
           \resumeItemListStart
-            \resumeItem{Developed a responsive, dark-mode UI on accessible Radix UI primitives (shadcn/ui), with interactive MapLibre and Leaflet maps, geolocation, and skeleton loading states.}
-            \resumeItem{Implemented geolocation-driven donation-camp search with debounced filtering, distance ranking, and paginated loading over PostGIS-backed queries.}
+            \resumeItem{Re-platformed a JavaScript/MongoDB prototype into a multi-tenant TypeScript app (Next.js App Router, React Server Components) with five role-based portals and JSON Web Token (JWT) / OTP authentication.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Blood Link} $|$ \emph{React, Next.js, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS}}{\emph{Solo project}}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack, location-aware blood-donation platform with role-gated donor/organisation/admin access (41 row-level-security policies across 13 tables) and distance-ranked map search over hand-written PostGIS functions.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -162,14 +172,6 @@
       {NIELIT}{2024}
       {Full Stack Web Development Training (Grade S, 80\%+)}{}
   \resumeSubHeadingListEnd
-
-%-----------ACHIEVEMENTS-----------
-\section{Achievements}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     Runner-up, Code Hunt Competition, GNA University (teams from 20 colleges); Runner-up, Byte Battle programming contest, IKGPTU.
-    }}
- \end{itemize}
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications}

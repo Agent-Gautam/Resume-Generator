@@ -1,0 +1,85 @@
+%-------------------------
+% Cover Letter in LaTeX — Gautam Anand
+% Role: ReactJS Developer @ Matrix Marketers (Kanmag Solutions Pvt Ltd), Mohali (onsite)
+% Matches the all-purpose resume header/margins/fonts.
+% Compile: npm run pdf -- "companies/matrix-marketers/reactjs-developer/cover-letter.tex"
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+% glyphtounicode is pdfTeX-only; XeTeX/LuaTeX (Tectonic) are Unicode-native
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins (identical to resume)
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------------------------
+%%%%%%  COVER LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING (matches resume)----------
+\begin{center}
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
+    \small Software Engineer \\ \vspace{2pt}
+    \small Mohali, Punjab, India $|$ +91 7717484812 $|$
+    \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
+    \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
+    \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{10pt}
+
+Dear Hiring Manager,
+
+I'm applying for the ReactJS Developer role at Matrix Marketers. I'm a frontend-focused software engineer who works day to day in React, JavaScript, and Redux, and I'm based in Mohali --- so the onsite setup is exactly what I'm looking for.
+
+My React experience comes from a year on the frontend at KoinX. I shipped production features across several repositories, built in React, JavaScript (ES6+), and Redux Toolkit, and spent a lot of that time on reusable components: I contributed things like an OTP input, a charting suite, and a virtualized-select refactor to a shared component library that three of our products used. That work is squarely what your posting describes --- building user-facing features and reusable libraries that other teams then build on. I also worked against RESTful APIs with React Query for the data layer, and put real effort into responsive behaviour and performance in the final phase, including bundle-size reduction and component memoization.
+
+A few of your nice-to-haves are also things I reach for by default: I write most of my code in TypeScript, use Next.js and JSON Web Token authentication in my own full-stack projects, and I'm comfortable in a Node.js/Express backend when a feature needs it. I'm an early-career engineer rather than a decade-deep one, but I've spent that time going deep on exactly this stack, and I learn a codebase by reading its patterns before I add to it.
+
+I'd genuinely like to build this kind of work here in Mohali, and I'd welcome the chance to talk. Thank you for your time.
+
+\vspace{6pt}
+
+Best regards, \\
+Gautam Anand
+
+\end{document}

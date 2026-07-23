@@ -23,7 +23,11 @@ You are writing a document a human recruiter skims in 7 seconds and an ATS parse
 - A metric-free specific bullet is fine. A fabricated percentage is not. Never write "improved performance by 40%" unless the 40% exists in a source doc.
 - You may **reframe** and **reorder** facts freely; you may never **upgrade** them. Reframing a `[partial]` claim into a bullet is an upgrade — don't. Only `[shipped]` claims are eligible.
 
-## Bullet craft
+## Experience bullets are selected verbatim, not written
+
+Work-experience bullets are **not authored here.** Each experience in `profile/general-resume.md` has a fixed, user-vetted bullet library (synced from `profile/source.json`). For the Experience section you **select** a JD-relevant subset that fits the page and use each chosen bullet **exactly as written** — never reword, trim, merge, re-punctuate, re-spell, or "improve" it. Tailoring an experience to a JD means *choosing which bullets and their order*, nothing else. Include as many as fit after skills/projects; dropping bullets for space is expected. The "Bullet craft", "Human voice", and JD-spelling-mirroring guidance below governs **project bullets, summaries, and skills rows only** — the parts you still author. If you catch yourself editing the words of an experience bullet, stop: that breaks the honesty control.
+
+## Bullet craft (project bullets / summaries — NOT experience)
 
 **Formula (default, then vary):** strong verb + what was built/done + key tech (JD keywords) + honest outcome or scale.
 
@@ -69,6 +73,10 @@ spearheaded, leveraged/leveraging, delved, honed, meticulous(ly), seamless(ly), 
 - Spell out an acronym once if the JD uses the long form ("continuous integration (CI)").
 - Dates in a consistent "Mon YYYY – Mon YYYY" format. Location for every entry.
 - Contact line: city, phone, email, GitHub, LinkedIn — all as plain readable text.
+- **Location = the JD's location, with a remote-distance exception.** Default: set the header city to the location named in the JD (e.g. JD "Bengaluru" → `Bengaluru, India`; "Noida, India — Hybrid" → `Noida, India`) — this passes location filters and signals fit (candidate is open to relocation anywhere in India). Exceptions, both → `Mohali, Punjab, India`:
+  1. The JD names **no** location (or is remote with no city).
+  2. The role is **remote** AND the JD's city is **outside the north-India belt** (beyond Delhi / Gurgaon / Noida — e.g. Bengaluru, Hyderabad, Mumbai, Pune, Chennai, Kolkata). A remote job needs no relocation signal, so a distant city is pointless and incongruous — use the real home city instead.
+  - So: on-site/hybrid anywhere → JD city. Remote **within** north India (Delhi/Gurgaon/Noida/Chandigarh and nearer) → JD city. Remote **outside** north India → Mohali. No location → Mohali. Never default to the home city merely because it's in the profile.
 
 ## Section order
 

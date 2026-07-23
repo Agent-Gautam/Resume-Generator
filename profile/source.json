@@ -2,7 +2,7 @@
   "personal": {
     "name": "Gautam Anand",
     "title": "Software Engineer",
-    "location": "Phagwara, Punjab, India",
+    "location": "Mohali, Punjab, India",
     "phone": "+91 7717484812",
     "email": "gautam.anand.ptu@gmail.com",
     "linkedin": "https://www.linkedin.com/in/gautam-anand-ptu",
@@ -53,13 +53,30 @@
       "title": "Software Engineer Intern (Frontend)",
       "company": "KoinX",
       "duration": "Jun 2025 – Jun 2026",
-      "description": "Designed and shipped reusable, responsive UI components and features using modern frontend frameworks and TypeScript. Delivered over 70 pull requests across multiple production repositories, working on various features that were reviewed and merged under team code-review standards. Collaborated with senior engineers in an Agile workflow, following component-driven architecture and engineering best practices to consistently meet quality and performance targets."
+      "description": [
+        "Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.",
+        "Designed reusable components (OTP input, chart suite, filter display) for the org's shared design system, consumed across multiple product surfaces — requiring backward-compatible APIs as the components scaled beyond their original use case.",
+        "Owned feature decisions end-to-end — incorporating code-review feedback to revise implementation approaches, debugging and iterating independently rather than shipping first drafts.",
+        "Owned the transaction-categorization and internal-transfer surface of KoinX's accounting platform across ~12 shipped changes — categorization flows, uncategorize/re-recognize actions, workspace-level transfer settings (React, TypeScript, Redux Toolkit).",
+        "Built AI-powered transaction search with natural-language filtering and recent-search history, plus the applied-filters display layer that made complex filter state legible to users.",
+        "Contributed 19 PRs to xui, the org's shared component library consumed by three products — charting suite, OTP input, virtualized-select refactor, and a precision-loss warning on financial amount display.",
+        "Hardened correctness in a domain where errors carry tax-filing consequences: removed timezone dependency in transaction timestamp conversion, added null-safety across amount/currency rendering.",
+        "Drove frontend performance work in the final phase — bundle-size reduction, component memoization, and a dependency audit removing unused packages."
+      ]
     },
     {
       "title": "Full Stack Developer",
       "company": "Pixels and Grids",
       "duration": "Dec 2024 – Feb 2025",
-      "description": "Built and enhanced full-stack features for client applications using modern frameworks and databases, participating across all phases from design to deployment. Designed and integrated secure REST APIs and relational database schemas, improving data consistency and feature reliability. Collaborated with designers and developers to deliver production-ready features on deadline."
+      "description": [
+        "Built full-stack seller and buyer modules for a multi-vendor e-commerce platform (KollaBee), including product CRUD with multi-image uploads (cover, thumbnail, detail) to Supabase, dynamic order/analytics dashboards, and an integrated Razorpay checkout flow.",
+        "Implemented the database and authentication layer for a SaaS platform (Conceevo) using Prisma ORM, and shipped a bulk HTML email marketing feature that targeted users opted into platform updates.",
+        "Built secure account-management features for an e-commerce seller dashboard, including password reset, forgot-password flow, and multi-bank payment method management.",
+        "Wrote test coverage for core lead and appointment modules, and evaluated charting libraries (Nivo, Shadcn) to inform the platform's analytics roadmap.",
+        "Delivered UI/UX features across 4 client projects, including conditional discount logic in an admin pricing panel, responsive navigation/search fixes, and reusable CMS-driven public pages.",
+        "Updated content, schema, and layout for a healthcare client site (Vyshnavi Hospital) under rapid-turnaround constraints — doctor profile management, schema changes for optional fields, and mobile navigation fixes.",
+        "Built a dynamic seller dashboard shell with a sidebar reflecting live route/user state and a reusable page header component, used across the seller-side experience."
+      ]
     }
   ],
   "projects": [

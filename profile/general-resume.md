@@ -5,17 +5,16 @@
 ## Contact
 - **Full name:** Gautam Anand
 - **Headline title:** Software Engineer
-- **City, Country:** Phagwara, Punjab, India
+- **City, Country:** Mohali, Punjab, India
 - **Phone:** +91 7717484812
 - **Email:** gautam.anand.ptu@gmail.com
 - **GitHub:** https://github.com/Agent-Gautam
 - **LinkedIn:** https://www.linkedin.com/in/gautam-anand-ptu
-- **Portfolio/website (optional):** TODO or delete
 
 ## Target
 - **Roles:** Software Engineer (frontend / full-stack / backend variants per JD)
-- **Locations / remote preference:** TODO
-- **Earliest start date:** TODO (B.Tech completes 2026; KoinX internship ended Jun 2026)
+- **Locations / remote preference:** Remote, or open to relocate anywhere in India
+- **Earliest start date:** Immediate (B.Tech completed 2026; KoinX internship ended Jun 2026)
 
 ## Education
 - **Degree:** B.Tech, Computer Science
@@ -30,22 +29,32 @@
 
 ## Work experience
 
+> **Bullet-selection rule (binding).** Each experience below carries a fixed **verbatim bullet library** (synced from `profile/source.json` → `workExperience[].description`). To build a resume, **select** a JD-relevant subset that fits one page and drop it in **exactly as written** — never reword, trim, merge, re-punctuate, or re-spell a bullet. JD tailoring for experience = *choosing which bullets and in what order*, nothing else. Not every bullet is included in a given resume; how many fit depends on the JD and the space left after skills/projects. (This differs from project bullets and skills rows, which may still be reworded/spelling-mirrored per the JD.) Keep this library in sync with `source.json` — if one changes, update the other.
+
 ### Software Engineer Intern (Frontend) — KoinX
 - **Dates:** Jun 2025 – Jun 2026
 - **Location:** Remote
-- **Facts:**
-  - Designed and shipped reusable, responsive UI components and features using modern frontend frameworks and TypeScript.
-  - Delivered 70+ pull requests across multiple production repositories, reviewed and merged under team code-review standards.
-  - Worked in an Agile workflow with senior engineers; component-driven architecture.
-- **Verifiable numbers:** 70+ merged PRs.
+- **Bullet library (verbatim — select, never modify):**
+  1. Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.
+  2. Designed reusable components (OTP input, chart suite, filter display) for the org's shared design system, consumed across multiple product surfaces — requiring backward-compatible APIs as the components scaled beyond their original use case.
+  3. Owned feature decisions end-to-end — incorporating code-review feedback to revise implementation approaches, debugging and iterating independently rather than shipping first drafts.
+  4. Owned the transaction-categorization and internal-transfer surface of KoinX's accounting platform across ~12 shipped changes — categorization flows, uncategorize/re-recognize actions, workspace-level transfer settings (React, TypeScript, Redux Toolkit).
+  5. Built AI-powered transaction search with natural-language filtering and recent-search history, plus the applied-filters display layer that made complex filter state legible to users.
+  6. Contributed 19 PRs to xui, the org's shared component library consumed by three products — charting suite, OTP input, virtualized-select refactor, and a precision-loss warning on financial amount display.
+  7. Hardened correctness in a domain where errors carry tax-filing consequences: removed timezone dependency in transaction timestamp conversion, added null-safety across amount/currency rendering.
+  8. Drove frontend performance work in the final phase — bundle-size reduction, component memoization, and a dependency audit removing unused packages.
 
 ### Full Stack Developer — Pixels and Grids
 - **Dates:** Dec 2024 – Feb 2025
 - **Location:** Remote
-- **Facts:**
-  - Built full-stack features for client applications; participated from design to deployment.
-  - Designed and integrated REST APIs and relational database schemas.
-  - Collaborated with designers and developers to deliver production features on deadline.
+- **Bullet library (verbatim — select, never modify):**
+  1. Built full-stack seller and buyer modules for a multi-vendor e-commerce platform (KollaBee), including product CRUD with multi-image uploads (cover, thumbnail, detail) to Supabase, dynamic order/analytics dashboards, and an integrated Razorpay checkout flow.
+  2. Implemented the database and authentication layer for a SaaS platform (Conceevo) using Prisma ORM, and shipped a bulk HTML email marketing feature that targeted users opted into platform updates.
+  3. Built secure account-management features for an e-commerce seller dashboard, including password reset, forgot-password flow, and multi-bank payment method management.
+  4. Wrote test coverage for core lead and appointment modules, and evaluated charting libraries (Nivo, Shadcn) to inform the platform's analytics roadmap.
+  5. Delivered UI/UX features across 4 client projects, including conditional discount logic in an admin pricing panel, responsive navigation/search fixes, and reusable CMS-driven public pages.
+  6. Updated content, schema, and layout for a healthcare client site (Vyshnavi Hospital) under rapid-turnaround constraints — doctor profile management, schema changes for optional fields, and mobile navigation fixes.
+  7. Built a dynamic seller dashboard shell with a sidebar reflecting live route/user state and a reusable page header component, used across the seller-side experience.
 
 ## Skills (only ones defensible in an interview)
 - **Languages:** C, C++, Python, JavaScript (ES6), TypeScript
@@ -59,7 +68,7 @@
 ## Projects (index — bullets may ONLY come from a source doc in `projects/`)
 | Project | Stack (per source.json) | Source doc |
 |---|---|---|
-| Cryptax (CryptoTax Buddy) | Next.js, TypeScript, Express.js, PostgreSQL, Gemini API | `projects/cryptax.md` ✔ |
+| Cryptax | Next.js, TypeScript, Express.js, PostgreSQL, Gemini API | `projects/cryptax.md` ✔ |
 | Faculty Feedback System | Next.js 16, React 19, TypeScript, PostgreSQL, Prisma 7 | `projects/faculty-feedback.md` ✔ |
 | Blood Link | Next.js 15, React 19, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS | `projects/blood-link.md` ✔ |
 

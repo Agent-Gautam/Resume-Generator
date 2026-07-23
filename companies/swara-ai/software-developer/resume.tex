@@ -1,0 +1,118 @@
+%==============================================================
+% DEFAULT RESUME TEMPLATE — ATS-friendly, single column, 1 page
+%
+% Compile from project root:
+%   npm run pdf -- "companies/<company>/<role>/resume.tex"
+%
+% Rules for filling this template (see .claude/skills/latex-resume):
+%   - Escape these characters in content:  & % $ # _  ->  \& \% \$ \# \_
+%   - Keep content ASCII. No Unicode symbols, no emoji.
+%   - Never delete the macro definitions; only edit the CONTENT section.
+%   - Target exactly ONE page. Fitting levers, in order:
+%     cut weakest bullets -> shorten bullets -> reduce \vspace -> margins
+%     (never below 0.5in) -> font size (never below 10pt).
+%==============================================================
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+
+% --- Section headers: small caps with a rule underneath -------
+\titleformat{\section}{\large\scshape}{}{0pt}{}[\vspace{-6pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{8pt}{6pt}
+
+% --- Macros ---------------------------------------------------
+% \ResumeHeader{Name}{contact line}
+\newcommand{\ResumeHeader}[2]{%
+  \begin{center}
+    {\Huge\bfseries #1}\\[5pt]
+    {\small #2}%
+  \end{center}\vspace{-6pt}}
+
+% \Entry{Title/Org (bold)}{Right: dates}{Subtitle (italic)}{Right: location/link}
+\newcommand{\Entry}[4]{%
+  \textbf{#1} \hfill {\small #2}\par
+  \textit{\small #3} \hfill {\small\textit{#4}}\par\vspace{-1pt}}
+
+% \EntryLine{Title (bold)}{Right side} — single-line variant (projects, certs)
+\newcommand{\EntryLine}[2]{\textbf{#1} \hfill {\small #2}\par\vspace{-1pt}}
+
+% Bullet list for entries
+\newenvironment{Bullets}
+  {\begin{itemize}[leftmargin=1.15em,itemsep=1pt,parsep=0pt,topsep=2pt]\small}
+  {\end{itemize}\vspace{2pt}}
+
+% \SkillRow{Category}{comma-separated skills}
+\newcommand{\SkillRow}[2]{{\small \textbf{#1:} #2}\par\vspace{1.5pt}}
+
+%==============================================================
+% CONTENT — everything below is placeholder; replace per JD
+%==============================================================
+\begin{document}
+
+\ResumeHeader{Gautam Anand}
+  {Mohali, Punjab, India \;|\; +91 7717484812 \;|\;
+   \href{mailto:gautam.anand.ptu@gmail.com}{gautam.anand.ptu@gmail.com} \;|\;
+   \href{https://github.com/Agent-Gautam}{github.com/Agent-Gautam} \;|\;
+   \href{https://www.linkedin.com/in/gautam-anand-ptu}{linkedin.com/in/gautam-anand-ptu}}
+
+%--------------------------------------------------------------
+\section{Skills}
+\SkillRow{Languages}{Python, TypeScript, JavaScript (ES6), C++, SQL}
+\SkillRow{Frontend}{React, Next.js, Redux, Tailwind CSS, shadcn/ui}
+\SkillRow{Backend}{Node.js, Express, RESTful APIs, PostgreSQL, Prisma}
+\SkillRow{AI \& Data}{LLM integration (Vercel AI SDK, Gemini), tool-calling agents, streaming data pipelines / ETL}
+\SkillRow{Tools \& Practices}{Git, GitHub, Vitest, Agile/Scrum, Code Review}
+
+%--------------------------------------------------------------
+\section{Experience}
+\Entry{Software Engineer Intern (Frontend), KoinX}{Jun 2025 -- Jun 2026}{Crypto tax \& accounting platform}{Remote}
+\begin{Bullets}
+  \item Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.
+  \item Built AI-powered transaction search with natural-language filtering and recent-search history, plus the applied-filters display layer that made complex filter state legible to users.
+  \item Owned the transaction-categorization and internal-transfer surface of KoinX's accounting platform across \textasciitilde{}12 shipped changes -- categorization flows, uncategorize/re-recognize actions, workspace-level transfer settings (React, TypeScript, Redux Toolkit).
+\end{Bullets}
+
+\Entry{Full Stack Developer, Pixels and Grids}{Dec 2024 -- Feb 2025}{Software development studio}{Remote}
+\begin{Bullets}
+  \item Built full-stack seller and buyer modules for a multi-vendor e-commerce platform (KollaBee), including product CRUD with multi-image uploads (cover, thumbnail, detail) to Supabase, dynamic order/analytics dashboards, and an integrated Razorpay checkout flow.
+  \item Implemented the database and authentication layer for a SaaS platform (Conceevo) using Prisma ORM, and shipped a bulk HTML email marketing feature that targeted users opted into platform updates.
+\end{Bullets}
+
+%--------------------------------------------------------------
+\section{Projects}
+\EntryLine{CryptoTax Buddy -- full-stack crypto-tax platform with a grounded AI assistant}{\href{https://github.com/Agent-Gautam}{github.com/Agent-Gautam}}
+\begin{Bullets}
+  \item Solo-built a full-stack web app (Next.js 16 / React 19 frontend, Express 5 / TypeScript / PostgreSQL backend) with a versioned REST API, JWT auth, an 8-table Prisma schema, and 38 Vitest unit tests; deployed on Railway.
+  \item Built a streaming data-ingestion pipeline (Busboy, csv-parser) that ingests, parses, and normalizes uploaded records with manual backpressure and batched, transactionally rolled-back inserts -- handling files up to 1 GB without loading them into memory.
+  \item Integrated a large language model (Vercel AI SDK, Google Gemini) as an agentic assistant over 8 whitelisted, database-backed tools, with prompt-level guardrails that stop the model from computing or hallucinating any figure.
+\end{Bullets}
+
+\EntryLine{Faculty Feedback Platform -- multi-tenant analytics app with five role-based portals}{\href{https://github.com/Agent-Gautam}{github.com/Agent-Gautam}}
+\begin{Bullets}
+  \item Built a multi-tenant faculty-feedback platform (Next.js 16 App Router, React 19, TypeScript, PostgreSQL, Prisma 7) with five role-based portals, a 14-model relational schema, and server-computed analytics dashboards.
+  \item Wrote a transactional feedback-submission server action (ownership check, rating validation, atomic delete-create-status update) plus bulk generation with set-based de-duplication.
+\end{Bullets}
+
+%--------------------------------------------------------------
+\section{Education}
+\Entry{B.Tech, Computer Science}{2022 -- 2026}{I.K. Gujral Punjab Technical University}{Punjab, India \;|\; CGPA 8.6/10}
+\vspace{2pt}
+\Entry{Full Stack Web Development Training -- Grade S}{2024}{NIELIT}{India}
+
+%--------------------------------------------------------------
+\section{Certifications}
+\EntryLine{Google Cloud Foundations}{Google Cloud}
+\EntryLine{JavaScript Algorithms \& Data Structures}{freeCodeCamp}
+\EntryLine{Node.js, Express.js \& SQL}{Scrimba}
+
+\end{document}

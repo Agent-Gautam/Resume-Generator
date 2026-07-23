@@ -1,0 +1,84 @@
+%-------------------------
+% Cover Letter in LaTeX — Gautam Anand, GENERAL / all-purpose
+% Matches companies/general/all-purpose/resume.tex (same header, margins, fonts)
+% Compile: npm run pdf -- "companies/general/all-purpose/cover-letter.tex"
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+% glyphtounicode is pdfTeX-only; XeTeX/LuaTeX (Tectonic) are Unicode-native
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins (identical to resume)
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------------------------
+%%%%%%  COVER LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING (matches resume)----------
+\begin{center}
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
+    \small Software Engineer \\ \vspace{2pt}
+    \small Mohali, Punjab, India $|$ +91 7717484812 $|$
+    \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
+    \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
+    \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{10pt}
+
+Dear Hiring Manager,
+
+I'm writing to apply for the [Role] position at [Company]. I'm a software engineer who works mostly in React, TypeScript, and Next.js, and I like building things that other people end up relying on.
+
+Most of that came from my year at KoinX, where I interned on the frontend. I shipped features across several repositories in a fast-moving codebase, which meant a lot of reading existing patterns before adding to them. I owned the transaction-categorization surface of the accounting platform end to end, and I contributed components --- an OTP input, a charting suite, a virtualized-select refactor --- to the shared library three of our products depended on. Working on a tax product also taught me to care about correctness in a way I hadn't before: a rounding error or a timezone bug there has real consequences, so I got used to checking my own work harder.
+
+Outside of work I build full-stack projects to learn the parts my job didn't cover. I wrote a crypto-tax app with a deterministic tax engine and an AI assistant that's deliberately not allowed to make up numbers, and a location-aware blood-donation platform backed by PostgreSQL and PostGIS. They're solo projects, but they're where I've done my deepest thinking about data modeling and security.
+
+I'd welcome the chance to talk about how I can help your team. Thank you for your time.
+
+\vspace{6pt}
+
+Best regards, \\
+Gautam Anand
+
+\end{document}

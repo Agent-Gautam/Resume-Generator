@@ -2,10 +2,11 @@
 
 > **Protocol.** Each entry below carries a stamp: `(size-bytes, YYYY-MM-DD last-write)` of its source file. Staleness check = run one quick dir listing (`Get-ChildItem profile, projects, templates | Select Name, Length, LastWriteTime`) and compare against the stamps. Rebuild only entries whose stamp mismatches, then update the stamp. Never rebuild everything blindly.
 
-## Profile digest — `profile/general-resume.md` *(4379 bytes, 2026-07-11)*
-**Gautam Anand** — Software Engineer, Phagwara, Punjab, India. +91 7717484812, gautam.anand.ptu@gmail.com. GitHub: github.com/Agent-Gautam · LinkedIn: linkedin.com/in/gautam-anand-ptu. Both jobs were Remote.
+## Profile digest — `profile/general-resume.md` *(7638 bytes, 2026-07-23)*
+**Gautam Anand** — Software Engineer, Mohali, Punjab, India. +91 7717484812, gautam.anand.ptu@gmail.com. GitHub: github.com/Agent-Gautam · LinkedIn: linkedin.com/in/gautam-anand-ptu. Both jobs were Remote. Available immediately; open to remote or relocation anywhere in India.
+- **⚠️ Resume header location = the JD's location** (JD "Bengaluru" → `Bengaluru, India`; "Noida" → `Noida, India`). Use `Mohali, Punjab, India` when (a) the JD names no city, or (b) the role is **remote** and its city is **outside north India** (beyond Delhi/Gurgaon/Noida — e.g. a Bengaluru/Hyderabad/Mumbai remote job). On-site/hybrid anywhere, and remote within north India, use the JD city. Never default to the home city. (Rule: `resume-writing` skill ATS mechanics + `write-resume` step 5.)
 - **Education:** B.Tech CS, I.K. Gujral Punjab Technical University, 2022–2026, CGPA 8.6/10; NIELIT Full Stack Web Dev Training, Grade S, 2024.
-- **Experience:** (1) SWE Intern (Frontend), KoinX, Jun 2025–Jun 2026 — reusable TS UI components, 70+ merged PRs in production repos, Agile + code review. (2) Full Stack Developer, Pixels and Grids, Dec 2024–Feb 2025 — client app features, REST APIs, relational schemas.
+- **Experience:** (1) SWE Intern (Frontend), KoinX, Jun 2025–Jun 2026. (2) Full Stack Developer, Pixels and Grids, Dec 2024–Feb 2025. **⚠️ Experience bullets are now a fixed VERBATIM library** (8 KoinX + 7 P&G bullets, in `general-resume.md`, synced from `source.json`). Build a resume by *selecting* a JD-relevant subset that fits one page and pasting it **unchanged** — never reword/trim/merge an experience bullet. Not all fit; count is a space decision. (Reword rule still applies to project bullets + skills rows, not experience.) See the binding rule at the top of the Work-experience section.
 - **Skills:** C, C++, Python, JS (ES6), TypeScript; DSA/OOP; React, Next.js, Node.js, Redux; HTML5/CSS/Sass/Tailwind/shadcn; SQL, PostgreSQL; Git/GitHub, Agile, REST.
 - **Achievements:** runner-up Code Hunt (GNA Univ, 20 colleges) and Byte Battle DSA (IKGPTU); 4-star HackerRank C; 200+ LeetCode/GFG problems.
 - **Certs (issuers verified vs source.json 2026-07-11):** Google Cloud Foundations (Google Cloud), JavaScript Algorithms & DS (freeCodeCamp), Node.js/Express.js/SQL (Scrimba). Resume preference: show Certifications, omit the LeetCode/GFG problem-count + HackerRank C-rating.
@@ -15,7 +16,7 @@
 ## Project digests
 
 ### cryptax — `projects/cryptax.md` *(22909 bytes, 2026-07-11; synced: backend@1cbe6ca, frontend@cbae215)* — TAGGED + audited (`cryptax.audit.md`, clean)
-**CryptoTax Buddy** — solo full-stack crypto-tax web app (Indian VDA rules), deployed on Railway.
+**Cryptax** — solo full-stack crypto-tax web app (Indian VDA rules), deployed on Railway. **Canonical display name is "Cryptax" — never "CryptoTax Buddy".**
 - **Stack:** TypeScript strict/ESM, Node 22, Express 5, PostgreSQL + Prisma 7, Zod 4, Vitest; frontend Next.js 16 App Router, React 19, TanStack Query 5, shadcn/Tailwind 4; AI via Vercel AI SDK v6 + Google Gemini. ~12k LoC total.
 - **Core:** deterministic pure-function FIFO tax engine (30% §115BBH, 1% TDS, no loss offset, Indian FY bucketing, Decimal(30,18) precision) — 27 unit tests; +11 normalizer tests (38 total).
 - **Distinctives:** streaming CSV ingestion w/ manual backpressure (1 GB cap, transactional rollback); full auth (OTP registration, JWT + rotating hashed refresh tokens, per-device session revocation); AI assistant that CANNOT compute numbers — 8 whitelisted Zod-typed DB-backed tools, userId closure-scoped (authorization boundary); whitelisted dynamic Prisma groupBy/aggregate endpoint; 8-model schema w/ deliberate indexing; idempotent recalculation via transactional wipe-and-recreate.

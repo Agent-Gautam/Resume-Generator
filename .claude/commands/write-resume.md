@@ -37,6 +37,10 @@ Using the project digests in memory, choose the 2–3 projects that best match t
 
 Draft the resume content per that skill: tailored ordering, JD keyword mirroring, honest claims only, human voice. Respect every project's honesty notes. **Only `[shipped]`-tagged claims are eligible** — a bullet built from `[partial]`/`[planned]`/`[stub]` material is a fabrication; drop the underlying JD keyword and record it as a gap in step 7 instead.
 
+**Header location follows the JD (with a remote-distance exception).** Set the header city to the JD's location (e.g. JD "Bengaluru" → `Bengaluru, India`; "Noida, India — Hybrid" → `Noida, India`). Use `Mohali, Punjab, India` when: (a) the JD names no city, OR (b) the role is **remote** and its city is **outside the north-India belt** (beyond Delhi/Gurgaon/Noida — e.g. a Bengaluru/Hyderabad/Mumbai/Pune remote job). On-site/hybrid anywhere, and remote within north India, still use the JD city. Never default to the profile's home city. (Full rule in the `resume-writing` skill's ATS mechanics.)
+
+**Experience bullets are verbatim-selected, never written.** Each work experience in `profile/general-resume.md` carries a fixed bullet library (synced from `profile/source.json`). For the Experience section, **choose** a JD-relevant subset that fits one page and drop each chosen bullet in **exactly as written** — no rewording, trimming, merging, re-punctuating, or re-spelling. JD tailoring for experience = *which bullets, in what order*. Not every bullet is used; how many fit is a space decision (see step 6's page-fitting). This applies ONLY to experience — project bullets and skills rows may still be reworded/spelling-mirrored per the JD. If the page overflows, cut experience bullets by relevance and/or trim project bullets — never edit an experience bullet's wording to save space.
+
 ## 6. Produce LaTeX + PDF (load the `latex-resume` skill)
 
 1. Copy `templates/<template>.tex` (or `templates/default.tex` if no template was given) to the output folder as `resume.tex`.
