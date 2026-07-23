@@ -66,11 +66,14 @@
 - **User-attested, being learned (OK in skills lists at user's request; no repo evidence yet — never write project bullets about these):** MUI, Jest (added 2026-07-05)
 
 ## Projects (index — bullets may ONLY come from a source doc in `projects/`)
-| Project | Stack (per source.json) | Source doc |
-|---|---|---|
-| Cryptax | Next.js, TypeScript, Express.js, PostgreSQL, Gemini API | `projects/cryptax.md` ✔ |
-| Faculty Feedback System | Next.js 16, React 19, TypeScript, PostgreSQL, Prisma 7 | `projects/faculty-feedback.md` ✔ |
-| Blood Link | Next.js 15, React 19, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS | `projects/blood-link.md` ✔ |
+
+> **Links (from `source.json`) — include on every resume project entry.** Each project below carries a live demo + GitHub repo. Put them on the project heading (e.g. jake template's `\resumeProjectHeading` right-side arg, or an inline `Live | Code` link pair). Use the exact URLs here.
+
+| Project | Stack (per source.json) | Live | GitHub | Source doc |
+|---|---|---|---|---|
+| Cryptax | Next.js, TypeScript, Express.js, PostgreSQL, Gemini API | https://cryp1ax.vercel.app | https://github.com/Agent-Gautam/buddy-backend | `projects/cryptax.md` ✔ |
+| Faculty Feedback System | Next.js 16, React 19, TypeScript, PostgreSQL, Prisma 7 | https://give-feedback.vercel.app | https://github.com/Agent-Gautam/faculty-feedback-refactor | `projects/faculty-feedback.md` ✔ |
+| Blood Link | Next.js 15, React 19, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS | https://blood-link2.vercel.app | https://github.com/Agent-Gautam/blood-link-supabase | `projects/blood-link.md` ✔ |
 
 ## Achievements
 - Runner-up, Code Hunt Competition, GNA University — teams from 20 colleges.

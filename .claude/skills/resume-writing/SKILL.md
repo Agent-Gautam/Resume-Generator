@@ -34,6 +34,7 @@ Work-experience bullets are **not authored here.** Each experience in `profile/g
 > Built a streaming CSV ingestion pipeline (Busboy, csv-parser) with manual backpressure and batched inserts, handling uploads up to 1 GB without loading files into memory.
 
 - 3–6 bullets for the most relevant entry, 2–3 for others. First bullet of each entry = the most JD-relevant fact, not the chronologically first.
+- **Every project needs at least two bullets, or it's cut.** A project reduced to a single bullet earns no impact — it reads as a stub and wastes a line. If a project's `[shipped]` material can't honestly support two distinct bullets for this JD, drop the whole project rather than list it with one. (Applies to the Projects section; experience entries follow the verbatim-selection rule above.)
 - One idea per bullet. If a bullet has "and ... and", split or cut.
 - Length must vary. A resume where every bullet is exactly two lines reads machine-generated.
 - Past tense for past work, present tense only for a current role's ongoing duties.
@@ -73,6 +74,7 @@ spearheaded, leveraged/leveraging, delved, honed, meticulous(ly), seamless(ly), 
 - Spell out an acronym once if the JD uses the long form ("continuous integration (CI)").
 - Dates in a consistent "Mon YYYY – Mon YYYY" format. Location for every entry.
 - Contact line: city, phone, email, GitHub, LinkedIn — all as plain readable text.
+- **Project links are mandatory.** Every project entry carries a live-demo link and a GitHub link (URLs in `profile/general-resume.md`'s Projects table, sourced from `source.json`). Render both on the project heading — e.g. a right-aligned `\href{live}{Live} $|$ \href{repo}{Code}` pair — using the exact URLs. A recruiter clicking through to a working demo is high-signal; don't drop the links to save space. Use the precise URL string given (don't "correct" a subdomain that looks like a typo — flag it to the user instead).
 - **Location = the JD's location, with a remote-distance exception.** Default: set the header city to the location named in the JD (e.g. JD "Bengaluru" → `Bengaluru, India`; "Noida, India — Hybrid" → `Noida, India`) — this passes location filters and signals fit (candidate is open to relocation anywhere in India). Exceptions, both → `Mohali, Punjab, India`:
   1. The JD names **no** location (or is remote with no city).
   2. The role is **remote** AND the JD's city is **outside the north-India belt** (beyond Delhi / Gurgaon / Noida — e.g. Bengaluru, Hyderabad, Mumbai, Pune, Chennai, Kolkata). A remote job needs no relocation signal, so a distant city is pointless and incongruous — use the real home city instead.

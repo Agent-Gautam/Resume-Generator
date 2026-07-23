@@ -88,7 +88,9 @@
         "Express.js",
         "PostgreSQL",
         "Gemini API"
-      ]
+      ],
+      "live": "cryp1ax.vercel.app",
+      "github": "https://github.com/Agent-Gautam/buddy-backend"
     },
     {
       "title": "Faculty Feedback System",
@@ -96,7 +98,9 @@
         "Next.js",
         "TypeScript",
         "PostgreSQL"
-      ]
+      ],
+      "live": "give-feedback.vercel.app",
+      "github": "https://github.com/Agent-Gautam/faculty-feedback-refactor"
     },
     {
       "title": "Blood Link",
@@ -105,7 +109,9 @@
         "TypeScript",
         "Supabase",
         "Tailwind CSS"
-      ]
+      ],
+      "live": "blood-link2.vercel.app",
+      "github": "https://github.com/Agent-Gautam/blood-link-supabase"
     }
   ],
   "achievements": [

@@ -2,7 +2,7 @@
 
 > **Protocol.** Each entry below carries a stamp: `(size-bytes, YYYY-MM-DD last-write)` of its source file. Staleness check = run one quick dir listing (`Get-ChildItem profile, projects, templates | Select Name, Length, LastWriteTime`) and compare against the stamps. Rebuild only entries whose stamp mismatches, then update the stamp. Never rebuild everything blindly.
 
-## Profile digest — `profile/general-resume.md` *(7638 bytes, 2026-07-23)*
+## Profile digest — `profile/general-resume.md` *(8211 bytes, 2026-07-23)*
 **Gautam Anand** — Software Engineer, Mohali, Punjab, India. +91 7717484812, gautam.anand.ptu@gmail.com. GitHub: github.com/Agent-Gautam · LinkedIn: linkedin.com/in/gautam-anand-ptu. Both jobs were Remote. Available immediately; open to remote or relocation anywhere in India.
 - **⚠️ Resume header location = the JD's location** (JD "Bengaluru" → `Bengaluru, India`; "Noida" → `Noida, India`). Use `Mohali, Punjab, India` when (a) the JD names no city, or (b) the role is **remote** and its city is **outside north India** (beyond Delhi/Gurgaon/Noida — e.g. a Bengaluru/Hyderabad/Mumbai remote job). On-site/hybrid anywhere, and remote within north India, use the JD city. Never default to the home city. (Rule: `resume-writing` skill ATS mechanics + `write-resume` step 5.)
 - **Education:** B.Tech CS, I.K. Gujral Punjab Technical University, 2022–2026, CGPA 8.6/10; NIELIT Full Stack Web Dev Training, Grade S, 2024.
