@@ -1,0 +1,113 @@
+%==============================================================
+% DEFAULT RESUME TEMPLATE — ATS-friendly, single column, 1 page
+%
+% Compile from project root:
+%   npm run pdf -- "companies/<company>/<role>/resume.tex"
+%
+% Rules for filling this template (see .claude/skills/latex-resume):
+%   - Escape these characters in content:  & % $ # _  ->  \& \% \$ \# \_
+%   - Keep content ASCII. No Unicode symbols, no emoji.
+%   - Never delete the macro definitions; only edit the CONTENT section.
+%   - Target exactly ONE page. Fitting levers, in order:
+%     cut weakest bullets -> shorten bullets -> reduce \vspace -> margins
+%     (never below 0.5in) -> font size (never below 10pt).
+%==============================================================
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+
+% --- Section headers: small caps with a rule underneath -------
+\titleformat{\section}{\large\scshape}{}{0pt}{}[\vspace{-6pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{10pt}{7pt}
+
+% --- Macros ---------------------------------------------------
+% \ResumeHeader{Name}{contact line}
+\newcommand{\ResumeHeader}[2]{%
+  \begin{center}
+    {\Huge\bfseries #1}\\[5pt]
+    {\small #2}%
+  \end{center}\vspace{-6pt}}
+
+% \Entry{Title/Org (bold)}{Right: dates}{Subtitle (italic)}{Right: location/link}
+\newcommand{\Entry}[4]{%
+  \textbf{#1} \hfill {\small #2}\par
+  \textit{\small #3} \hfill {\small\textit{#4}}\par\vspace{-1pt}}
+
+% \EntryLine{Title (bold)}{Right side} — single-line variant (projects, certs)
+\newcommand{\EntryLine}[2]{\textbf{#1} \hfill {\small #2}\par\vspace{-1pt}}
+
+% Bullet list for entries
+\newenvironment{Bullets}
+  {\begin{itemize}[leftmargin=1.15em,itemsep=1.5pt,parsep=0pt,topsep=3pt]\small}
+  {\end{itemize}\vspace{3pt}}
+
+% \SkillRow{Category}{comma-separated skills}
+\newcommand{\SkillRow}[2]{{\small \textbf{#1:} #2}\par\vspace{1.5pt}}
+
+%==============================================================
+% CONTENT
+%==============================================================
+\begin{document}
+
+\ResumeHeader{Gautam Anand}
+  {Mohali, Punjab, India \;|\; +91 7717484812 \;|\;
+   \href{mailto:gautam.anand.ptu@gmail.com}{gautam.anand.ptu@gmail.com} \;|\;
+   \href{https://github.com/Agent-Gautam}{github.com/Agent-Gautam} \;|\;
+   \href{https://www.linkedin.com/in/gautam-anand-ptu}{linkedin.com/in/gautam-anand-ptu}}
+
+%--------------------------------------------------------------
+\section{Skills}
+\SkillRow{Frontend}{React, Next.js, Redux Toolkit, HTML, CSS, Sass, Tailwind CSS, shadcn/ui, responsive design}
+\SkillRow{Languages}{JavaScript (ES6), TypeScript, SQL, Python, C++}
+\SkillRow{Backend}{Node.js, Express.js, REST APIs, PostgreSQL, Prisma}
+\SkillRow{Fundamentals \& tools}{Data Structures \& Algorithms, OOP, Git, GitHub, Agile, code review, component libraries}
+
+%--------------------------------------------------------------
+\section{Experience}
+\Entry{Software Engineer Intern (Frontend)}{Jun 2025 -- Jun 2026}{KoinX}{Remote}
+\begin{Bullets}
+  \item Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.
+  \item Designed reusable components (OTP input, chart suite, filter display) for the org's shared design system, consumed across multiple product surfaces -- requiring backward-compatible APIs as the components scaled beyond their original use case.
+  \item Contributed 19 PRs to xui, the org's shared component library consumed by three products -- charting suite, OTP input, virtualized-select refactor, and a precision-loss warning on financial amount display.
+  \item Drove frontend performance work in the final phase -- bundle-size reduction, component memoization, and a dependency audit removing unused packages.
+\end{Bullets}
+
+\Entry{Full Stack Developer}{Dec 2024 -- Feb 2025}{Pixels and Grids}{Remote}
+\begin{Bullets}
+  \item Delivered UI/UX features across 4 client projects, including conditional discount logic in an admin pricing panel, responsive navigation/search fixes, and reusable CMS-driven public pages.
+  \item Built a dynamic seller dashboard shell with a sidebar reflecting live route/user state and a reusable page header component, used across the seller-side experience.
+\end{Bullets}
+
+%--------------------------------------------------------------
+\section{Projects}
+\EntryLine{Cryptax -- crypto-tax web app (React front end on a Node.js API)}{\href{https://cryp1ax.vercel.app}{Live} $|$ \href{https://github.com/Agent-Gautam/buddy-backend}{Code}}
+\begin{Bullets}
+  \item Built the Next.js 16 App Router dashboard in React 19 -- route-group layouts, TanStack React Query for all server state, shadcn/Tailwind components and light/dark theming.
+  \item Wrote an Axios interceptor that collapses concurrent 401s into a single in-flight token refresh and replays the queued requests, so an expiring session never interrupts the user.
+  \item Built the Node.js/Express.js API behind it in TypeScript, around a pure-function FIFO tax engine covered by 27 Vitest unit tests.
+\end{Bullets}
+
+\EntryLine{Blood Link -- location-aware blood-donation platform}{\href{https://blood-link2.vercel.app}{Live} $|$ \href{https://github.com/Agent-Gautam/blood-link-supabase}{Code}}
+\begin{Bullets}
+  \item Built donor camp discovery in React 19 -- browser geolocation, debounced search and filters, distance-ranked cards, skeleton loading states and load-more pagination, with MapLibre and Leaflet map views.
+  \item Developed a responsive, themeable interface across 27 pages and three user roles on Next.js 15 with Tailwind and shadcn/Radix primitives.
+  \item Wrote the PL/pgSQL PostGIS stored procedures the search runs on, ranking results by distance with filtering and pagination handled in SQL.
+\end{Bullets}
+
+%--------------------------------------------------------------
+\section{Education}
+\Entry{B.Tech, Computer Science -- CGPA 8.6/10}{2022 -- 2026}{I.K. Gujral Punjab Technical University}{Punjab, India}
+\vspace{2pt}
+\SkillRow{Certifications}{JavaScript Algorithms \& Data Structures (freeCodeCamp); Node.js, Express.js \& SQL (Scrimba); Google Cloud Foundations (Google Cloud); Full Stack Web Development, Grade S (NIELIT, 2024)}
+
+\end{document}

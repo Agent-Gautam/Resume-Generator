@@ -1,0 +1,87 @@
+%-------------------------
+% Cover Letter in LaTeX — Gautam Anand
+% Role: Front End Developer @ Pyramid Global Technologies (Glassdoor listing, Mohali)
+% Matches the resume header/margins/fonts.
+% Compile: npm run pdf -- "companies/pyramid-global-technologies/front-end-developer/cover-letter.tex"
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+% glyphtounicode is pdfTeX-only; XeTeX/LuaTeX (Tectonic) are Unicode-native
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins (identical to resume)
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textwidth}{1in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------------------------
+%%%%%%  COVER LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING (matches resume)----------
+\begin{center}
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
+    \small Software Engineer \\ \vspace{2pt}
+    \small Mohali, Punjab, India $|$ +91 7717484812 $|$
+    \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
+    \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
+    \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{10pt}
+
+Dear Hiring Manager,
+
+I'm applying for the Front End Developer role at Pyramid Global Technologies. Your posting asks for React, Node JS and HTML --- those three are the centre of what I've been building for the last year and a half, both professionally and in my own projects.
+
+Most of my React work comes from a year on the frontend at KoinX. I shipped 11 production features across 7 repositories, and a good share of that was reusable component work: an OTP input, a charting suite and a filter-display layer for the org's shared design system, plus 19 pull requests to the component library that three of our products consumed. Keeping those APIs backward-compatible as they outgrew their first use case taught me more about frontend design than any single feature did. I closed out with a performance pass --- bundle-size reduction, memoization, and a dependency audit that removed packages nobody was using.
+
+On the Node JS side, I built the Express API behind my own crypto-tax app, Cryptax, in TypeScript, and its Next.js/React 19 dashboard on top --- including a token-refresh interceptor that collapses concurrent 401s into one refresh so a session expiring mid-use never reaches the user. My other project, Blood Link, is a location-aware donation platform where I wrote both the React interface (geolocation search, debounced filtering, MapLibre maps, responsive theming across 27 pages) and the PostGIS queries underneath it. Both are live and linked on my resume, so you can click through rather than take my word for it.
+
+One thing I'd like to clear up early: the listing is filed under Mohali, but the description mentions Sydney. I'm based in Mohali and would be glad to work from an office here --- could you tell me whether this is a Mohali-based position or a Sydney-facing one? Either way I'm interested; I'd just rather ask than assume.
+
+I'm an early-career engineer rather than a decade-deep one, but the time I have has gone almost entirely into this stack, and I read a codebase's existing patterns before adding to it. I'd welcome a conversation. Thank you for your time.
+
+\vspace{6pt}
+
+Best regards, \\
+Gautam Anand
+
+\end{document}

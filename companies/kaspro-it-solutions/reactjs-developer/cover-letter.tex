@@ -1,0 +1,88 @@
+%-------------------------
+% Cover Letter in LaTeX — Gautam Anand
+% Role: ReactJS Developer @ Kaspro IT Solutions, Mohali (on-site)
+% Sent with resume.pdf as an attachment via kasproit.com/contact-us
+% Matches the resume header/margins/fonts.
+% Compile: npm run pdf -- "companies/kaspro-it-solutions/reactjs-developer/cover-letter.tex"
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+% glyphtounicode is pdfTeX-only; XeTeX/LuaTeX (Tectonic) are Unicode-native
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins (identical to resume)
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textwidth}{1in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------------------------
+%%%%%%  COVER LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING (matches resume)----------
+\begin{center}
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
+    \small Software Engineer \\ \vspace{2pt}
+    \small Mohali, Punjab, India $|$ +91 7717484812 $|$
+    \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
+    \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
+    \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{10pt}
+
+Dear Hiring Manager,
+
+I'm applying for the ReactJS Developer opening listed on your careers page. I'm a frontend engineer based in Mohali, so your Phase 8-B office is a local commute, and I can start immediately. My resume is attached.
+
+Most of my React work comes from a year-long frontend internship at KoinX, where I shipped 11 production features across 7 repositories in React, JavaScript, TypeScript and Redux Toolkit. A good share of that was the component and architecture work your posting describes: I designed reusable components --- an OTP input, a charting suite, a filter-display layer --- for the organisation's shared design system, and contributed 19 pull requests to the component library that three of their products consumed. Keeping those APIs backward-compatible as they outgrew their original use case taught me more about frontend structure than any single feature did. I work in HTML, CSS, Bootstrap, Sass and Tailwind depending on what a project already uses.
+
+Your posting also asks specifically about API implementation and about debugging, and those are the parts of the job I enjoy most. At KoinX I built interfaces against REST APIs day to day, and in my own project Cryptax I wrote both ends --- a React 19 and Next.js dashboard on top of an Express API I built in TypeScript --- including an Axios interceptor that collapses concurrent 401 responses into a single token refresh so an expiring session never reaches the user. On the debugging side, I removed a timezone dependency in transaction timestamp conversion and added null-safety across amount and currency rendering, in a product where a display error has tax-filing consequences. On my Blood Link project I ran a documented hardening pass: non-atomic uploads that orphaned stored files, a silent form-key mismatch that dropped data before it reached the database, and debug logging that leaked user IDs.
+
+All three of my projects are live with source you can read --- Cryptax, Blood Link and a multi-tenant faculty feedback platform --- and the links are on my resume, so you can look at the actual code rather than take my word for it. I'm an early-career engineer rather than a decade-deep one, but the time I have has gone almost entirely into this stack, and I read a codebase's existing patterns before I add to it.
+
+I'd welcome the chance to talk, and I'm happy to come in to your Mohali office at short notice. Thank you for your time.
+
+\vspace{6pt}
+
+Best regards, \\
+Gautam Anand
+
+\end{document}

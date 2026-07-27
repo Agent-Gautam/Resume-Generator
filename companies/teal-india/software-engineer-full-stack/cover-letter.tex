@@ -1,0 +1,87 @@
+%-------------------------
+% Cover Letter in LaTeX — Gautam Anand
+% Role: Software Engineer - Full Stack @ Teal India, Bengaluru (in office, WFH flexibility)
+% Matches the all-purpose resume header/margins/fonts.
+% Compile: npm run pdf -- "companies/teal-india/software-engineer-full-stack/cover-letter.tex"
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+% glyphtounicode is pdfTeX-only; XeTeX/LuaTeX (Tectonic) are Unicode-native
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins (identical to resume)
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------------------------
+%%%%%%  COVER LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING (matches resume)----------
+\begin{center}
+    \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
+    \small Software Engineer \\ \vspace{2pt}
+    \small Bengaluru, India $|$ +91 7717484812 $|$
+    \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
+    \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
+    \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{10pt}
+
+Dear Hiring Team,
+
+I'm applying for the Software Engineer - Full Stack role at Teal India. I work day to day in Node.js, Express, and Next.js, and I'm relocating to Bengaluru for this role --- I can be in the office from day one.
+
+The requirement I'd point at first is hands-on LLM work with API-based integration. I built the AI assistant in Cryptax, my crypto-tax application: a streaming chat endpoint on the Vercel AI SDK with Google Gemini, running an agentic tool-calling loop over eight whitelisted, Zod-typed tools that read from PostgreSQL. The design decision I care about is that the model cannot compute anything --- it may only report figures a tool returned, digit for digit, and every tool is closure-scoped to the requesting user's ID so authorization is enforced server-side rather than trusted to the prompt. Making an LLM useful and non-hallucinatory over real financial data was the actual engineering problem; the API call was the easy part.
+
+Since Teal works in property data and geospatial, the other project worth mentioning is BloodLink, where I hand-wrote four PL/pgSQL PostGIS stored procedures --- ST\_Distance ranking on geography columns, with search, dynamic sort direction, and keyset pagination all pushed down into SQL --- alongside row-level security across thirteen tables. On the production side, I spent a year interning on the frontend at KoinX, shipping 11 features across 7 repositories in React, TypeScript, and Next.js, and I got there by tracing a large unfamiliar codebase's existing patterns before extending them. That's the habit I'd bring to a small team that expects people to gather context quickly and work through ambiguity.
+
+One thing I'll say plainly: my deepest database work is PostgreSQL and Prisma, not MongoDB. My real MongoDB exposure is a JavaScript/MongoDB codebase I re-architected onto TypeScript and PostgreSQL --- so I know the document model and where its trade-offs bite, but I'd be ramping up rather than arriving an expert. The rest of your stack is what I already build in every day.
+
+I'd welcome the chance to talk. Thank you for your time and consideration.
+
+\vspace{6pt}
+
+Sincerely, \\
+Gautam Anand
+
+\end{document}
