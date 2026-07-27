@@ -1,8 +1,12 @@
 %-------------------------
-% Resume in Latex — Gautam Anand, GENERAL / all-purpose (Wellfound & other platforms)
-% Rebuilt from scratch 2026-07-24. Template: templates/jake.tex (Jake Gutierrez, MIT), cross-engine patched.
-% Content: 3 KoinX bullets + P&G (space-driven); Cryptax + Blood Link projects; minimal core skills.
-% Compile: npm run pdf -- "companies/general/all-purpose/resume.tex"
+% VARIANT RESUME — Gautam Anand — "generalist"
+% Target: SDE / Software Engineer / trainee / fresher / mixed-stack roles, and any
+% platform profile (Wellfound, Naukri, LinkedIn Easy Apply) with no specific JD.
+% Reusable master — do NOT tailor to one company. See variants/generalist/spec.md.
+% Harvested 2026-07-27 from companies/gammastack/software-engineer-trainee (score 90).
+% Leads with CS fundamentals + backend/DB; all three projects; achievements shown.
+% Template: templates/jake.tex (Jake Gutierrez, MIT), cross-engine patched
+% Compile: npm run pdf -- "variants/generalist/resume.tex"
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -34,8 +38,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -86,6 +90,13 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
+% HEADER CITY — the ONLY line to change when reusing this variant.
+% Set it to the job's city for on-site/hybrid roles, or for remote roles inside
+% north India. Leave as Mohali when the JD names no city, or the role is remote
+% and based outside north India. (Rule: resume-writing skill, ATS mechanics.)
+\newcommand{\HeaderCity}{Mohali, Punjab, India}
+
+%-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -94,7 +105,7 @@
 \begin{center}
     \textbf{\Huge \scshape Gautam Anand} \\ \vspace{2pt}
     \small Software Engineer \\ \vspace{2pt}
-    \small Mohali, Punjab, India $|$ +91 7717484812 $|$
+    \small \HeaderCity $|$ +91 7717484812 $|$
     \href{mailto:gautam.anand.ptu@gmail.com}{\underline{gautam.anand.ptu@gmail.com}} \\ \vspace{1pt}
     \small \href{https://github.com/Agent-Gautam}{\underline{github.com/Agent-Gautam}} $|$
     \href{https://www.linkedin.com/in/gautam-anand-ptu}{\underline{linkedin.com/in/gautam-anand-ptu}}
@@ -104,11 +115,11 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: TypeScript, JavaScript (ES6+), Python, C++, C} \\
-     \textbf{Frontend}{: React, Next.js, Redux, HTML5, CSS, Sass, Tailwind CSS, ShadCN} \\
-     \textbf{Backend \& Databases}{: Node.js, Express, SQL, PostgreSQL, MongoDB, REST APIs} \\
-     \textbf{Tools \& Practices}{: Git, GitHub, Docker, Agile/Scrum, Code Review} \\
-     \textbf{CS Foundations}{: Data Structures \& Algorithms, Problem Solving, OOP, SDLC}
+     \textbf{CS Foundations}{: Data Structures \& Algorithms, Object-Oriented Programming, Problem Solving, SDLC} \\
+     \textbf{Languages}{: Python, JavaScript (ES6+), TypeScript, C++, C, SQL, HTML5, CSS3} \\
+     \textbf{Backend \& Databases}{: Node.js, Express, REST APIs, PostgreSQL, Prisma, Supabase, Zod} \\
+     \textbf{Frontend}{: React, Next.js, Redux, TanStack Query, Tailwind CSS, shadcn/ui, MUI, Bootstrap, responsive design} \\
+     \textbf{Tools \& Practices}{: Git, GitHub, Vitest, Jest, ESLint, Prettier, Agile/Scrum, code review}
     }}
  \end{itemize}
 
@@ -117,12 +128,11 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Engineer Intern (Frontend)}{Jun 2025 -- July 2026}
+      {Software Engineer Intern (Frontend)}{Jun 2025 -- Jun 2026}
       {KoinX}{Remote}
       \resumeItemListStart
         \resumeItem{Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.}
-        \resumeItem{Designed reusable components (OTP input, chart suite, filter display) for the org's shared design system, consumed across multiple product surfaces — requiring backward-compatible APIs as the components scaled beyond their original use case.}
-        \resumeItem{Owned feature decisions end-to-end — incorporating code-review feedback to revise implementation approaches, debugging and iterating independently rather than shipping first drafts.}
+        \resumeItem{Owned the transaction-categorization and internal-transfer surface of KoinX's accounting platform across ~12 shipped changes — categorization flows, uncategorize/re-recognize actions, workspace-level transfer settings (React, TypeScript, Redux Toolkit).}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -139,17 +149,24 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Cryptax} $|$ \emph{TypeScript, React, Next.js, Node.js, Express, PostgreSQL, Prisma, Vercel AI SDK}}{\href{https://cryp1ax.vercel.app}{\underline{Live}} $|$ \href{https://github.com/Agent-Gautam/buddy-backend}{\underline{Code}}}
+          {\textbf{Cryptax} $|$ \emph{TypeScript, Node.js, Express, PostgreSQL, Prisma, Next.js, Gemini API}}{\emph{Solo} $|$ \href{https://cryp1ax.vercel.app}{\underline{Live}} $|$ \href{https://github.com/Agent-Gautam/buddy-backend}{\underline{Code}}}
           \resumeItemListStart
-            \resumeItem{Built a streaming AI assistant (Vercel AI SDK, Google Gemini) using an agentic tool-calling loop over 8 whitelisted, database-backed tools, so every figure it reports is real and traceable rather than model-generated.}
-            \resumeItem{Designed a deterministic FIFO tax engine handling Indian VDA tax rules with decimal-precision arithmetic, covered by 27 Vitest unit tests.}
+            \resumeItem{Built a REST API on Node.js/Express with a PostgreSQL + Prisma data layer and Zod-validated inputs, plus a deterministic FIFO tax engine for Indian VDA rules covered by 27 Vitest unit tests.}
+            \resumeItem{Added a streaming AI assistant (Google Gemini) over 8 whitelisted, database-backed tools, so every figure it reports is real and traceable rather than model-generated.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Blood Link} $|$ \emph{Next.js, React, TypeScript, Supabase (PostgreSQL/PostGIS), Tailwind CSS}}{\href{https://blood-link2.vercel.app}{\underline{Live}} $|$ \href{https://github.com/Agent-Gautam/blood-link-supabase}{\underline{Code}}}
+          {\textbf{Faculty Feedback} $|$ \emph{Next.js, React, TypeScript, PostgreSQL, Prisma}}{\emph{Solo} $|$ \href{https://give-feedback.vercel.app}{\underline{Live}} $|$ \href{https://github.com/Agent-Gautam/faculty-feedback-refactor}{\underline{Code}}}
+          \resumeItemListStart
+            \resumeItem{Re-platformed a single-tenant JavaScript/MongoDB prototype into a multi-tenant TypeScript app (Next.js, Prisma/PostgreSQL) with role-based analytics dashboards and JWT/OTP authentication.}
+            \resumeItem{Modeled a 14-table multi-tenant PostgreSQL schema with composite-unique idempotency, and wrote a ~690-line aggregation module producing teacher leaderboards, rating histograms, and cross-cycle trends.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Blood Link} $|$ \emph{Next.js, React, TypeScript, Supabase (PostgreSQL/PostGIS)}}{\emph{Solo} $|$ \href{https://blood-link2.vercel.app}{\underline{Live}} $|$ \href{https://github.com/Agent-Gautam/blood-link-supabase}{\underline{Code}}}
           \resumeItemListStart
             \resumeItem{Built a location-aware blood-donation platform on Supabase: distance-ranked nearby-camp search via hand-written PL/pgSQL PostGIS functions, secured by 41 row-level-security policies across 13 tables.}
-            \resumeItem{Built a responsive React 19 + Tailwind/shadcn UI with interactive MapLibre/Leaflet maps and geolocation camp discovery, hardened with defense-in-depth authorization (edge-middleware role guards, Supabase Auth SSR sessions, and server-action validation).}
+            \resumeItem{Designed a three-sided role-gated API on Next.js Server Actions (donor / organisation / admin) with defense-in-depth auth — edge middleware, row-level security, and server-action re-authentication.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -159,7 +176,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {I.K. Gujral Punjab Technical University}{2022 -- 2026}
-      {B.Tech, Computer Science (CGPA: 8.71/10)}{Punjab, India}
+      {B.Tech, Computer Science (CGPA: 8.6/10)}{Punjab, India}
     \resumeSubheading
       {NIELIT}{2024}
       {Full Stack Web Development Training (Grade S, 80\%+)}{}
@@ -169,8 +186,8 @@
 \section{Achievements \& Certifications}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Achievements}{: Runner-up, Code Hunt Competition, GNA University (teams from 20 colleges); Runner-up, Byte Battle (DSA) programming contest, IKGPTU.} \\
-     \textbf{Certifications}{: Google Cloud Foundations (Google Cloud); JavaScript Algorithms \& Data Structures (freeCodeCamp); Node.js, Express.js \& SQL (Scrimba).}
+     Runner-up, Byte Battle (Data Structures \& Algorithms) contest, IKGPTU; Runner-up, Code Hunt Competition, GNA University (teams from 20 colleges). \\
+     Certifications: Google Cloud Foundations (Google Cloud); JavaScript Algorithms \& Data Structures (freeCodeCamp); Node.js, Express.js \& SQL (Scrimba).
     }}
  \end{itemize}
 
