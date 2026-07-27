@@ -84,7 +84,8 @@ Score honestly. A 55 that tells the truth is worth more than a flattering 85.
 
 ## 8. Update memory
 
-- Append one row to the log in `memory/applications.md` (date, company, role, score, folder).
+- Append one row to the log in `memory/applications.md` (date, company, role, score, **variant**, folder, status). The Variant cell for a bespoke run is `bespoke`, plus the variant cluster it most resembles — e.g. `bespoke (frontend-react cluster)`. That tag is what later tells you a fourth cluster has appeared and deserves its own variant.
+- If this bespoke resume scores higher than the variant that covers its cluster, say so in the report — it's a candidate to re-harvest into `variants/` (see `variants/README.md`).
 - If you rebuilt or added any digest entries in step 1, make sure `memory/digest.md` is saved with updated stamps.
 
 ## 9. Report
