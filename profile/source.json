@@ -27,7 +27,8 @@
       "React.js",
       "Next.js",
       "Node.js",
-      "Redux"
+      "Redux",
+      "Express.js"
     ],
     "webAndStyling": [
       "HTML5",
@@ -38,21 +39,23 @@
     ],
     "databases": [
       "SQL",
-      "PostgreSQL"
+      "PostgreSQL",
+      "MongoDb"
     ],
     "toolsAndPractices": [
       "Git",
       "GitHub",
       "Agile/Scrum",
       "Code Review",
-      "REST APIs"
+      "REST APIs",
+      "Docker"
     ]
   },
   "workExperience": [
     {
       "title": "Software Engineer Intern (Frontend)",
       "company": "KoinX",
-      "duration": "Jun 2025 – Jun 2026",
+      "duration": "Jun 2025 – July 2026",
       "description": [
         "Shipped 11 production features across 7 repositories in a fast-moving startup codebase, working primarily in React/TypeScript/Next.js and navigating an unfamiliar large-scale codebase by tracing existing patterns before extending them.",
         "Designed reusable components (OTP input, chart suite, filter display) for the org's shared design system, consumed across multiple product surfaces — requiring backward-compatible APIs as the components scaled beyond their original use case.",
@@ -123,7 +126,7 @@
     {
       "degree": "B.Tech, Computer Science",
       "institution": "I.K. Gujral Punjab Technical University",
-      "cgpa": "8.6 / 10",
+      "cgpa": "8.71 / 10",
       "year": "2022 – 2026"
     },
     {

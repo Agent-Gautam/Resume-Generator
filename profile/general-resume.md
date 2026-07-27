@@ -59,11 +59,11 @@
 ## Skills (only ones defensible in an interview)
 - **Languages:** C, C++, Python, JavaScript (ES6), TypeScript
 - **CS fundamentals:** Data Structures & Algorithms, Problem Solving, OOP, SDLC
-- **Frameworks/libraries:** React.js, Next.js, Node.js, Redux
+- **Frameworks/libraries:** React.js, Next.js, Node.js, Express.js, Redux
 - **Web/styling:** HTML5, CSS, Sass, Tailwind CSS, shadcn/ui
-- **Databases:** SQL, PostgreSQL
+- **Databases:** SQL, PostgreSQL, MongoDB
 - **Tools/practices:** Git, GitHub, Agile/Scrum, Code Review, REST APIs
-- **User-attested, being learned (OK in skills lists at user's request; no repo evidence yet — never write project bullets about these):** MUI, Jest (added 2026-07-05)
+- **User-attested, being learned (OK in skills lists at user's request; no repo evidence yet — never write project bullets about these):** MUI, Jest (added 2026-07-05), Bootstrap incl. v4/v5 (added 2026-07-27)
 
 ## Projects (index — bullets may ONLY come from a source doc in `projects/`)
 
@@ -90,5 +90,5 @@
 
 ## Honesty notes (binding on every generated resume)
 - KoinX role was an **internship** — never present it as a full-time position.
-- Faculty Feedback System and Blood Link have no verified source docs yet — resumes may name them with stack only, but may NOT carry bullets/claims about them until a source doc exists.
-- TODO: add anything else a resume must not claim (e.g. scope limits of the Pixels and Grids work).
+- All three projects (Cryptax, Faculty Feedback System, Blood Link) now have verified, tagged + audited source docs under `projects/` — bullets/claims are allowed, but **only `[shipped]`-tagged claims may reach a resume**. The binding per-project honesty ledgers live in each source doc's Honesty section (and its `*.audit.md`) — those are authoritative. Key ones: Cryptax Google OAuth is `[partial]` (never write it); Cryptax exchange coverage is Giottus only; Blood Link Chart.js analytics and XP gamification are `[partial]`/dead code (never claim charts, data-viz, analytics, or gamification for Blood Link); Blood Link and Faculty Feedback have no automated tests (never claim tests for either); Faculty Feedback email delivery is scaffolded, not live.
+- Pixels and Grids was a ~3-month contract across multiple client projects — scope is feature-level contributions (per the verbatim bullet library above), not sole ownership of any full product.

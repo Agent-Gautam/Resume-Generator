@@ -1,11 +1,24 @@
 # Applications Log
 
-One row per generated resume. Appended automatically by `/write-resume`; the Status column is maintained by hand (applied / interview / rejected / offer).
+One row per application sent. Two ways a row gets here:
 
-| Date | Company | Role | Score | Folder | Status |
-|---|---|---|---|---|---|
-| 2026-07-05 | TeamViewer | Software Engineer - Front End | 64 | companies/teamviewer/software-engineer-front-end/ | generated (honesty-corrected 2026-07-11: removed fabricated Chart.js dashboards) |
-| 2026-07-05 | WisdomAI | Software Engineer, Frontend/Fullstack | 59 | companies/wisdom-ai/software-engineer-frontend-fullstack/ | generated (honesty-corrected 2026-07-11: Blood Link fake charts/XP → real Faculty Feedback Recharts) |
-| 2026-07-22 | — (General) | All-purpose (Wellfound & platforms) | n/a | companies/general/all-purpose/ | not JD-tailored; strongest verbatim experience bullets + all skills + full project set |
-| 2026-07-23 | Matrix Marketers (Kanmag Solutions) | ReactJS Developer | 78 | companies/matrix-marketers/reactjs-developer/ | generated; frontend-tailored resume + matching cover letter (PDF). Onsite Mohali; 3+ yr ask vs ~1 yr exp is the main gap |
-| 2026-07-23 | Henceforth Solutions | Full Stack Developer (MERN) | 68 | companies/henceforth-solutions/full-stack-developer-mern/ | generated; full-stack-tailored resume + jd.md + review. Onsite Mohali. Main gaps: MongoDB depth (real stack is PostgreSQL), 3+ yr bar, no WebSockets |
+- **`/apply`** (fast path) — sends a pre-built resume from `variants/`. Variant column = `<slug>@<date>`, Score = `—`.
+- **`/write-resume`** (bespoke) — writes a JD-tailored resume into `companies/<company>/<role>/`. Variant column = `bespoke`, plus the cluster it resembles.
+
+The Variant column records **what was actually sent**, slug + date, so later edits to a variant don't rewrite history. The Status column is maintained by hand (applied / interview / rejected / offer).
+
+| Date | Company | Role | Score | Variant | Folder | Status |
+|---|---|---|---|---|---|---|
+| 2026-07-05 | TeamViewer | Software Engineer - Front End | 64 | bespoke (pre-variants; frontend-react cluster) | companies/teamviewer/software-engineer-front-end/ | generated (honesty-corrected 2026-07-11: removed fabricated Chart.js dashboards) |
+| 2026-07-05 | WisdomAI | Software Engineer, Frontend/Fullstack | 59 | bespoke (pre-variants; fullstack cluster) | companies/wisdom-ai/software-engineer-frontend-fullstack/ | generated (honesty-corrected 2026-07-11: Blood Link fake charts/XP → real Faculty Feedback Recharts) |
+| 2026-07-22 | — (General) | All-purpose (Wellfound & platforms) | n/a | bespoke (pre-variants; **retired** — superseded by `generalist`) | companies/general/all-purpose/ | not JD-tailored; strongest verbatim experience bullets + all skills + full project set. Do not send this one any more — use `variants/generalist/resume.pdf` |
+| 2026-07-23 | Matrix Marketers (Kanmag Solutions) | ReactJS Developer | 78 | bespoke (pre-variants; frontend-react cluster) | companies/matrix-marketers/reactjs-developer/ | generated; frontend-tailored resume + matching cover letter (PDF). Onsite Mohali; 3+ yr ask vs ~1 yr exp is the main gap |
+| 2026-07-23 | Henceforth Solutions | Full Stack Developer (MERN) | 68 | bespoke (pre-variants; fullstack cluster) | companies/henceforth-solutions/full-stack-developer-mern/ | generated; full-stack-tailored resume + jd.md + review. Onsite Mohali. Main gaps: MongoDB depth (real stack is PostgreSQL), 3+ yr bar, no WebSockets |
+| 2026-07-23 | GammaStack | Software Engineer Trainee (Freshers) | 90 | bespoke → **harvested as `generalist`** | companies/gammastack/software-engineer-trainee/ | generated; fresher generalist role, on-site Indore. Candidate exceeds bar (2 internships + 3 projects). Main risks: relocation to Indore (unstated), possible over-qualification for trainee comp. No Java (JD "or" phrasing covers it) |
+| 2026-07-27 | Teal India | Software Engineer - Full Stack | 76 | bespoke → **harvested as `fullstack`** | companies/teal-india/software-engineer-full-stack/ | generated; folder now holds cover letter (earlier run, same day) + resume + review. Wellfound; hybrid Bengaluru, Rs 9–12L, 1+ yr (candidate clears it). Spine = Cryptax LLM tool-calling (JD's one hard AI ask) + BloodLink PostGIS (Teal is a geospatial/property-data company). Main gaps: MongoDB (JD's named DB, zero shipped work), Docker/K8s/AWS. `jd.md` carries full fit notes. Apply via the company's own ATS, not Wellfound |
+| 2026-07-27 | Pyramid Global Technologies | Front End Developer | 79 | bespoke (pre-variants; frontend-react cluster) | companies/pyramid-global-technologies/front-end-developer/ | generated; resume + cover letter (PDF) + review. Glassdoor listing filed under Mohali, Rs 3-8L (Glassdoor **estimate**), 30d+ old. **JD is three words long — React, Node JS, HTML — all evidenced, so the high score reflects a thin JD, not strong fit.** Company is a Sydney managed-IT-services provider (~11 staff, no public product); JD text says "Front End Developer in Sydney" while the listing is Mohali — cover letter asks this directly. Apply on employer site |
+| 2026-07-27 | Kaspro IT Solutions (Kaspro Solutions Pvt Ltd) | ReactJS Developer | 84 | bespoke → **harvested as `frontend-react`** | companies/kaspro-it-solutions/reactjs-developer/ | generated; resume + cover letter (PDF) + review, submitted via kasproit.com/contact-us **with attachment** (an earlier textarea-only `application-message.md` was deleted as superseded). On-site Mohali, 1-3 yr, 4 vacancies, Rs 3-8L (Glassdoor estimate). Services company (React/Angular/.NET/WordPress, since 2010, offices Mohali + Austin TX). **Bootstrap 4/5 now claimable — user-attested 2026-07-27, added to the profile's user-attested line (skills lists only, never a project bullet).** Remaining gaps: no frontend tests, no client-delivery track record, bottom of the 1-3 yr band, no Angular/.NET |
+
+## Variant system (added 2026-07-27)
+
+Three reusable resumes live in `variants/` — `frontend-react`, `fullstack`, `generalist`. Each was harvested from the best-scoring bespoke resume in its cluster (marked above). Routing table + city rule: `variants/README.md`. Send one with `/apply <company> <role>`; reserve `/write-resume` for jobs worth 20 minutes.
